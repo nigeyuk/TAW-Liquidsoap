@@ -1,28 +1,3 @@
-# Logging Configuration
-settings.log.file.path := "/home/nigel/liquidsoap/logs/taw-radio.log"
-settings.log.file := true
-settings.log.file.append := false
-settings.log.file.perms := 384
-settings.log.level := 4
-settings.log.unix_timestamps := false
-settings.log.recode := false
-settings.scheduler.log := true
-
-# Telnet Configuration
-settings.server.telnet := true
-settings.server.telnet.bind_addr := "192.168.0.187"
-settings.server.telnet.revdns := false
-settings.server.timeout := 120.
-settings.server.telnet.port := 9500
-
-# General Settings
-settings.console.colorize := "auto"
-settings.init.catch_exn := true
-settings.init.daemon := false
-settings.init.daemon.pidfile := true
-settings.init.daemon.pidfile.path := "/home/nigel/liquidsoap/liquidsoap.pid"
-settings.init.daemon.pidfile.perms := 416
-
 # ffmpeg settings
 settings.ffmpeg.log.level := 3
 settings.ffmpeg.log.verbosity := "warning"
