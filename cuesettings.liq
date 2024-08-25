@@ -1,0 +1,13 @@
+settings.autocue.cue_file.path := "cue_file"
+settings.autocue.cue_file.fade_in := 0.2  # seconds
+settings.autocue.cue_file.fade_out := 2.5  # seconds
+settings.autocue.cue_file.timeout := 60.0  # seconds
+settings.autocue.cue_file.target := -18.0  # LUFS
+settings.autocue.cue_file.silence := -42.0  # LU below track loudness
+settings.autocue.cue_file.overlay := -8.0  # LU below track loudness
+settings.autocue.cue_file.longtail := 15.0  # seconds
+settings.autocue.cue_file.overlay_longtail := -12.0  # extra LU
+settings.autocue.cue_file.sustained_loudness_drop := 40.0  # max. percent drop to be considered sustained
+settings.autocue.cue_file.noclip := false  # clipping prevention like loudgain's `-k`
+settings.autocue.cue_file.blankskip := 0.0  # skip silence in tracks
+settings.autocue.cue_file.use_json_metadata := true  # pass metadata to `cue_file` as JSON
