@@ -145,3 +145,42 @@ output.icecast(
   dynamic_radio  # Use dynamic_radio as the source
 )
 
+# HLS Streams
+
+# 96kbps aac
+aac_lofi = %ffmpeg(format="mpegts",
+                   %audio(
+                     codec="aac",
+                     channels=2,
+                     ar=44100,
+		     b="96k"
+                   ))
+
+# 192kbps aac
+aac_hifi = %ffmpeg(format="mpegts",
+                    %audio(
+                      codec="aac",
+                      channels=2,
+                      ar=44100,
+                      b="192k"
+                    ))
+
+streams = [("aac_lofi",aac_lofi),
+           ("aac_hifi", aac_hifi)]
+
+def segment_name(~position,~extname,stream_name) =
+  timestamp = int_of_float(time())
+  duration = 2
+  "#{stream_name}_#{duration}_#{timestamp}_#{position}.#{extname}"
+end
+
+output.file.hls(playlist="live.m3u8",
+                segment_duration=3.0,
+                segments=10,
+                segments_overhead=5,
+                segment_name=segment_name,
+                persist_at="state.config",
+                "HLS",
+                streams,
+		dynamic_radio
+                )
