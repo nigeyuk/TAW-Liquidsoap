@@ -16,6 +16,7 @@
 %include "autocue.cue_file.liq"
 %include "cuesettings.liq"
 %include "settings.liq"
+%include "youtube.liq"
 
 # log settings
 settings.log.file.path :=("/path/to/your/radio.log")
