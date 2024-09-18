@@ -6,7 +6,6 @@ settings.protocol.ffmpeg.path := "ffmpeg"
 settings.protocol.ffmpeg.metadata := true
 settings.protocol.ffmpeg.replaygain := false
 settings.decoder.file_extensions.id3 := ["mp3", "wav"]
-settings.decoder.file_extensions.mad := ["mp3", "mp2", "mp1"]
 settings.decoder.file_extensions.taglib := ["mp3", "ogg", "mkv", "wav", "flac", "mp4", "m4a"]
 
 settings.decoder.mime_types.id3 := ["audio/mpeg", "audio/x-wav"]
